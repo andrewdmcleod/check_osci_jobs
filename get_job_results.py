@@ -52,7 +52,7 @@ for cur_url in all_urls.items():
                 url = job['url']
                 color = job['color']
                 name = job['name']
-                if color != "blue": 
+                if color == "red": 
                     try:
                         with urllib.request.urlopen("{}/lastBuild/api/json/".format(url)) as job_jsonurl:
                             js_job_data = json.loads(job_jsonurl.read().decode())
