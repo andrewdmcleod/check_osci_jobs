@@ -24,9 +24,9 @@ addrow = False
 configs = {}
 configss = {}
 first_run = 0 
-out_lines = {}
 
 for cur_url in all_urls.items():
+    out_lines = {}
     first_run = 0 
     output_filename = "{}_failures.txt".format(cur_url[0])
     try:
