@@ -70,6 +70,9 @@ for cur_url in all_urls.items():
                                         else:
                                             print("{} job failed ({}) -- {}{}/consoleFull".format(name, color, url, js_job_data['id']))
                                             out_lines[ex_url] = js_job_data['id']
+                                if url not in in_lines:
+                                    out_lines[url] = js_job_data['id']
+                                    print("{} job failed ({}) -- {}{}/consoleFull".format(name, color, url, js_job_data['id']))
                     except urllib.error.HTTPError as e:
                         pass
         with open(output_filename, "w") as write_file:
